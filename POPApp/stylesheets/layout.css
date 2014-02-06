@@ -1,0 +1,102 @@
+/* Essentials */
+
+html, div, map, dt, isindex, form, header, aside, section, section, article, footer {  
+    display: block;  
+} 
+
+html, body {
+height: 100%;
+margin: 2;
+padding: 2;
+font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+background: #F8F8F8;
+font-size: 10px;
+}
+
+
+
+/* Content Manager */
+
+.tablesorter {
+width: 100%;
+margin: -5px 1 1 1;
+}
+
+.tablesorter td{
+margin: 0;
+padding: 0;
+border-bottom: 1px dotted #ccc;
+}
+
+.tablesorter thead tr {
+height: 34px;
+background: url(../images/table_sorter_header.png) repeat-x;
+text-align: left;
+text-indent: 10px;
+cursor: pointer;
+}
+
+.tablesorter td {
+padding: 15px 10px;
+}
+
+.center {
+	text-align: center;
+}
+
+.datatable { border-collapse: collapse;
+		width: 100%
+		margin-right:50px;}
+.datatable th { padding: .5em 0 .5em;
+	padding: 10;
+	background-color: #D1D1D1;
+	border-top: 1px solid #C8C8C8 thin;
+	border-bottom: solid #C8C8C8 thin;
+	margin-left:50px;
+	margin-right:50px;
+}
+
+#group1_header 
+  { font-size: 1.45em;
+  	padding: .5em 0 .5em;
+	padding: 10;
+	background-color: #282828;
+	border-top: 1px solid #C8C8C8 thin;
+	border-bottom: solid #C8C8C8 thin;
+	margin-left:50px;
+	margin-right:50px;
+}
+
+.datatable groupheader { padding: .5em 0 .5em;
+	padding: 10;
+	font-size:16px;
+	background-color: gray;
+	border-top: 1px solid #C8C8C8 thin;
+	border-bottom: solid #C8C8C8 thin;
+	margin-left:50px;
+	margin-right:50px;
+	font-size:16px;
+}
+.datatable td { border: solid #C8C8C8 thin;
+	padding:2px;
+	vertical-align:top;
+	margin-right:50px;
+	margin-left:50px;}
+	
+.datatable td textarea {
+	border:0px none;
+	width:100%;
+	height:100%;
+	font-size:11px;
+}	
+.datatable caption { font size: 1em; font-weight: bold;}
+
+tr:nth-child(even) {
+    background-color: white;
+}
+
+tr:nth-child(odd) {
+    background-color: #F0F0F0;
+}
+.tablesorter input[type=image] {
+margin-right: 50px;}
