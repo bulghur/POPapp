@@ -31,3 +31,4 @@ def get_connection():
                          password=PASSWORD,
                          charset='utf8',
                          use_unicode = True)
+

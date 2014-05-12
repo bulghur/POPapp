@@ -45,14 +45,33 @@
     $(function(){
         $('.column').equalHeight();
     });
-</script>
+	</script>
+	
+	<script type="text/javascript" src="/static/scripts.js"></script>
+	
+	
 
 </head>
 
 <body>
 
 Counter = {{ counter}}
-<h1> Pipeline of Potential </h1>
+
+
+<h1>
+<script type="text/javascript">
+	document.write("Pipeline of Potential");
+</script>
+</h1>
+
+<h2 id="helloMessage"> in Here!
+
+</h2>
+
+<noscript>
+<h3>call alert.</h3>
+</noscript>
+
 
 			<table class=datatable align="center"> 
 			<h2>POP Zones1 in GAE Sessions</h2>
@@ -103,5 +122,31 @@ Counter = {{ counter}}
 				<div class="clear"></div>
 			</div>
 		</article><!-- end of stats article -->
+		
+        <form action="/CreateInstance" method="POST">
+                <label>1. Select a Case</label>
+                         <select name="case_id" id="case_id"'>
+                                 <option>Active Case</option>
+                                {% for row in ddb_active_case %}
+                                <option value={{ row[0]|e }}>{{ row[1]|e }}</option>
+                                {% endfor %}
+                </select><br><br>
+        <label>2. Select a Process Step</label>
+        <br><br>
+                        <ul id="menu">
+                                {% for group in processmenu|groupby(1) %}
+                                 <li><a href="#">{{ group.grouper }}</a><ul>
+                                 {% for row in group.list %}
+                                 <li><a href="#" proc_step_id={{ row[2] }} proc_step_nm={{ row[4]|string() }}>{{ row[4] }}</a></li>
+                                 {% endfor %}</ul></li>
+                                {% endfor %}
+                        </li></ul>
+                        <br><br>
+                <ol id="proc_step_id_value"></ol>
+                <br>
+        
+                <div class="submit_link">
+                        <input type="submit" value="Create Instance">
+                        <input type="submit" value="Cancel">
 </body>
 
